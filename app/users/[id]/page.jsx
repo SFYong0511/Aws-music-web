@@ -26,7 +26,7 @@ const UserIDPage = () => {
 
     async function getUsers() {
         try {
-            const response = await fetch('https://k310qs8rs3.execute-api.eu-north-1.amazonaws.com/users', {
+            const response = await fetch('https://s4e8iu6y11.execute-api.us-east-1.amazonaws.com/users', {
                 method: 'GET'
             })
             const data = await response.json()
@@ -38,7 +38,7 @@ const UserIDPage = () => {
 
     async function getSongs() {
         try {
-            const response = await fetch('https://v9fz4mkkfh.execute-api.eu-north-1.amazonaws.com/music', {
+            const response = await fetch('https://rwc31kdyel.execute-api.us-east-1.amazonaws.com/music', {
                 method: 'GET'
             })
             const data = await response.json()
@@ -50,7 +50,7 @@ const UserIDPage = () => {
 
     async function handleDeleteSong(id) {
         try {
-            const response = await fetch(`https://v9fz4mkkfh.execute-api.eu-north-1.amazonaws.com/music/${id}`, {
+            const response = await fetch(`https://rwc31kdyel.execute-api.us-east-1.amazonaws.com/music/${id}`, {
                 method: 'DELETE'
             })
             const data = await response.data

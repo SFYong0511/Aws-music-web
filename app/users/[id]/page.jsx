@@ -65,15 +65,16 @@ const UserIDPage = () => {
     async function handleQuery() {
         let filteredSongs = songs
         setIsQuerying(true)
-        if (artist != '') {
-            filteredSongs = filteredSongs.filter(song => song.artist.toLowerCase().includes(artist))
-        }
         if (title != '') {
-            filteredSongs = filteredSongs.filter(song => song.toLowerCase().includes(title))
-        }
-        if (year != '') {
-            filteredSongs = filteredSongs.filter(song => song.year.toLowerCase().includes(year))
-        }
+    filteredSongs = filteredSongs.filter(song => typeof song.title === 'string' && song.title.toLowerCase().includes(title))
+}
+if (year != '') {
+    filteredSongs = filteredSongs.filter(song => typeof song.year === 'string' && song.year.toLowerCase().includes(year))
+}
+if (artist != '') {
+    filteredSongs = filteredSongs.filter(song => typeof song.artist === 'string' && song.artist.toLowerCase().includes(artist))
+}
+
         setQuerySongs(filteredSongs)
     }
 

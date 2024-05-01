@@ -1,4 +1,3 @@
-'use client'
 import { useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -19,6 +18,12 @@ const Register = () => {
 
 
     const handleRegister = async () => {
+        // Check if any of the fields are empty
+        if (!email || !username || !password) {
+            setError("Please fill in all fields.");
+            return;
+        }
+
         const path = `https://s4e8iu6y11.execute-api.us-east-1.amazonaws.com/users`
         console.log(path)
         try {

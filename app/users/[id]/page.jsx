@@ -1,9 +1,6 @@
-'use client'
-
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-
 
 const UserIDPage = () => {
     const pathName = usePathname()
@@ -13,9 +10,8 @@ const UserIDPage = () => {
     const [year, setYear] = useState('')
     const [artist, setArtist] = useState('')
     const [isQuerying, setIsQuerying] = useState(false)
-    const [querySongs, setQuerySongs] = useState()
+    const [querySongs, setQuerySongs] = useState([]) // Initialize with an empty array
     const [error, setError] = useState()
-
 
     const router = useRouter()
     const path = pathName.split('/')
@@ -86,7 +82,6 @@ const UserIDPage = () => {
             setSongs(data)
         })
     }, [])
-
 
     return (
         <main>

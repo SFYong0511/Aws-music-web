@@ -1,0 +1,61 @@
+  ▲ Next.js 14.2.1
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+    at setupFsCheck (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+    at async initialize (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/router-server.js:61:23)
+    at async Server.<anonymous> (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/start-server.js:249:36)
+README.md
+app
+next-env.d.ts
+next.config.mjs
+node_modules
+nohup.out
+package.json
+postcss.config.mjs
+public
+tailwind.config.ts
+tsconfig.json
+vockey.pem
+yarn.lock
+[31m[1mUsage Error[22m[39m: Couldn't find a script named "startr".
+
+[1m$ [22myarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] [--require #0] <scriptName> ...
+  ▲ Next.js 14.2.1
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 293ms
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at /Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/start-server.js:280:16
+    at new Promise (<anonymous>)
+    at startServer (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/start-server.js:191:11)
+    at Module.nextStart (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/cli/next-start.js:25:40)
+    at /Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/bin/next:101:856 {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at /Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/start-server.js:280:16
+    at new Promise (<anonymous>)
+    at startServer (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/server/lib/start-server.js:191:11)
+    at Module.nextStart (/Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/cli/next-start.js:25:40)
+    at /Users/sheldon/Documents/aws-music-app-main/node_modules/next/dist/bin/next:101:856 {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
